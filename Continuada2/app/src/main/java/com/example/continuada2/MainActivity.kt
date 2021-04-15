@@ -29,11 +29,12 @@ class MainActivity : AppCompatActivity() {
     fun comprar(view: View) {
 
 
-        val idCachorro1 = etCachorro1.text.toString().toInt()
-        val idCachorro2 = etCachorro2.text.toString().toInt()
+        val idCachorro1 = etCachorro1.text.toString()
+        val idCachorro2 = etCachorro2.text.toString()
 
         var cachorro1: Cachorro? = encontrarCachorro(idCachorro1)
         var cachorro2: Cachorro? = encontrarCachorro(idCachorro2)
+
 
         if(cachorro1 == null && cachorro2 == null) {
             telaCachorroNaoEncontrado(idCachorro1, idCachorro2)
@@ -50,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun telaCachorroNaoEncontrado(cachorro1Id: Int, cachorro2Id: Int) {
+    fun telaCachorroNaoEncontrado(cachorro1Id: String, cachorro2Id: String) {
         val cachorroNaoEncontrado = Intent(this, CachorroNaoEncontrado::class.java)
 
         cachorroNaoEncontrado.putExtra("cachorroId1", cachorro1Id)
@@ -83,17 +84,18 @@ class MainActivity : AppCompatActivity() {
         startActivity(cachorroEncontrado)
     }
 
-    fun encontrarCachorro(idCachorro: Int): Cachorro? {
+    fun encontrarCachorro(idCachorro: String): Cachorro? {
         val apiCachorros = ConexaoApiCachorros.criar()
 
         var cachorroEncontrado: Cachorro? = null
 
-        apiCachorros.get(idCachorro).enqueue(object: Callback<Cachorro> {
+        apiCachorros.get(idCachorro).enqueue(object : Callback<Cachorro> {
             override fun onResponse(call: Call<Cachorro>, response: Response<Cachorro>) {
                 val cachorro = response.body()
 
                 if (cachorro != null) {
                     cachorroEncontrado = cachorro
+                    println(cachorro.raca)
 
                 } else {
                     cachorroEncontrado = null
@@ -101,7 +103,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Cachorro>, t: Throwable) {
-                cachorroEncontrado = null
+//                cachorroEncontrado = null
             }
         })
 

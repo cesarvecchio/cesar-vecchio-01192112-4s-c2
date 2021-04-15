@@ -12,6 +12,6 @@ interface ApiCachorros {
     fun get(): List<Call<Cachorro>>
 
     @GET("cachorros/{id}")
-    fun get(@Path("id") id: Int): Call<Cachorro>
+    fun get(@Path("id") id: String): Call<Cachorro>
 
 }

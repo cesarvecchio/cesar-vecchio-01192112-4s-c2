@@ -8,7 +8,7 @@
 
     <string name="bt_comprar">Comprar Cachorros</string>
     <string name="nao_encontrado">(não encontrado)</string>
-    <string name="tv_nao_encontrado">Deu ruim... Nenhum cachorro encontrado com os ids %1d e %2d</string>
+    <string name="tv_nao_encontrado">Deu ruim... Nenhum cachorro encontrado com os ids %1s e %2s</string>
     <string name="cachoro_encontrado">Cachorro %1$d: $2%s</string>
     <string name="valor_total">Preço total de compra: R$%1$d</string>
 </resources>
