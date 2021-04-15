@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Continuada 2</string>
+
+    <string name="tv_identificador">Insira o Identificador de 2 tipos de cachorros.</string>
+
+    <string name="tv_cachorro1">Cachorro 1</string>
+    <string name="tv_cachorro2">Cachorro 2</string>
+
+    <string name="bt_comprar">Comprar Cachorros</string>
+    <string name="nao_encontrado">(não encontrado)</string>
+    <string name="tv_nao_encontrado">Deu ruim... Nenhum cachorro encontrado com os ids %1d e %2d</string>
+    <string name="cachoro_encontrado">Cachorro %1$d: $2%s</string>
+    <string name="valor_total">Preço total de compra: R$%1$d</string>
+</resources>

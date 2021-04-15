@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CachorroEncontrado">
+
+    <TextView
+        android:id="@+id/tv_cachorro1_encontrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cachoro_encontrado"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="40dp"/>
+
+    <TextView
+        android:id="@+id/tv_cachorro2_encontrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cachoro_encontrado"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cachorro1_encontrado"
+        app:layout_constraintLeft_toLeftOf="@id/tv_cachorro1_encontrado"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_valor_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_total"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cachorro2_encontrado"
+        app:layout_constraintLeft_toLeftOf="@id/tv_cachorro2_encontrado"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

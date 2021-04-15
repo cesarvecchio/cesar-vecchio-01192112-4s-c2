@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_mensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="@string/tv_identificador"/>
+
+    <TextView
+        android:id="@+id/tv_cachorro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_cachorro1"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mensagem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/et_cachorro1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cachorro1"
+        app:layout_constraintLeft_toLeftOf="@id/tv_cachorro1"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:hint="Ex. 1"/>
+
+    <TextView
+        android:id="@+id/tv_cachorro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_cachorro2"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@+id/tv_cachorro1"
+        app:layout_constraintLeft_toRightOf="@id/et_cachorro1"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:id="@+id/et_cachorro2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cachorro2"
+        app:layout_constraintLeft_toLeftOf="@id/tv_cachorro2"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:hint="Ex. 2"/>
+
+    <Button
+        android:id="@+id/bt_comprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_comprar"
+        app:layout_constraintTop_toBottomOf="@id/et_cachorro1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        android:onClick="comprar"/>
+
+    <ImageView
+        android:id="@+id/iv_cachorro1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/bt_comprar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/cachorro1"/>
+
+    <ImageView
+        android:id="@+id/iv_cachorro2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toTopOf="@+id/iv_cachorro1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/cachorro2"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
